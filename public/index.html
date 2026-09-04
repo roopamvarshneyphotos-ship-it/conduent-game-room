@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Game Room</title><link rel="stylesheet" href="/styles.css"></head>
+<body>
+<header><div class="eyebrow">CONDUENT GAME ROOM</div><h1>⚡ Fastest Finger First &nbsp;|&nbsp; 🎲 Lucky 7</h1></header>
+<main id="login" class="card login"><h2>Join Game</h2><input id="email" placeholder="Email ID" type="email"><input id="password" placeholder="Password" type="password"><button id="loginBtn" class="primary">LOGIN</button><div id="err"></div></main>
+<main id="game" class="hidden">
+  <div class="userbar"><b id="name"></b><span id="role"></span><button id="logout">Logout</button></div>
+  <section id="admin" class="card hidden">
+    <div class="tabs"><button id="fffTab" class="active">⚡ Fastest Finger</button><button id="luckyTab">🎲 Lucky 7</button></div>
+    <div id="fffAdmin"><div class="adminline"><h2>Fastest Finger First</h2><span id="qno"></span></div>
+      <label>Timer (seconds) <input id="timerInput" type="number" min="1" max="300" value="10"></label>
+      <button id="start" class="primary">START</button><button id="reveal">REVEAL RESULT</button><button id="next">NEXT</button><button id="reset">RESET</button>
+      <div id="adminQuestion"></div>
+    </div>
+    <div id="luckyAdmin" class="hidden"><h2>Lucky 7</h2><p>5 rounds. Players choose one of three options, then Admin rolls.</p>
+      <button id="lstart" class="primary">START LUCKY 7</button><button id="roll">ROLL TWO DICE</button><button id="lnext">NEXT ROUND</button><div id="adminLucky"></div>
+    </div>
+  </section>
+  <section class="card"><div class="titleline"><h2 id="title">Waiting for Admin</h2><div id="timer">--</div></div><div id="content"></div></section>
+  <section class="card"><h3>LIVE LEADERBOARD</h3><div id="board"></div></section>
+</main>
+<script src="/app.js"></script></body></html>
